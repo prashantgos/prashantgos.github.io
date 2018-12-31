@@ -1,0 +1,21 @@
+.horizontal-container
+{
+	display:table;
+	height:100%;
+	width:100%;
+}
+
+.horizontal-wrapper
+{
+	display:table-cell;
+	vertical-align: middle;
+	width:100%;
+}
+
+.horizontalLine
+{
+	border:none;
+	line-height:1px;
+	top:-50%;
+	min-height:1px;
+}

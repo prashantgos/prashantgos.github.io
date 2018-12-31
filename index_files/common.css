@@ -1,0 +1,311 @@
+/* ========================================================================== */
+/* Typography                                                                 */
+/* ========================================================================== */
+.preset-font-1 h1,
+.preset-font-1 h2,
+.preset-font-1 h3,
+.preset-font-1 h4 {
+    font-family: 'Lobster', Georgia, Times, serif;
+}
+.preset-font-1 p {
+    font-family: 'Cabin', Helvetica, Arial, sans-serif;	
+}
+.preset-font-2 h1,
+.preset-font-2 h2,
+.preset-font-2 h3,
+.preset-font-2 h4 {
+	font-family: 'Raleway', Helvetica, Arial, sans-serif;
+}
+.preset-font-2 p {
+	font-family: 'Goudy Bookletter 1911', Georgia, Times, serif;
+}
+.preset-font-3 h1,
+.preset-font-3 h2,
+.preset-font-3 h3,
+.preset-font-3 h4 {
+	font-family: 'Allerta', Helvetica, Arial, sans-serif;
+}
+.preset-font-3 p {
+	font-family: 'Crimson Text', Georgia, Times, serif;
+}
+.preset-font-4 h1,
+.preset-font-4 h2,
+.preset-font-4 h3,
+.preset-font-4 h4 {
+	font-family: 'Arvo', Georgia, Times, serif;
+}
+.preset-font-4 p {
+	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+}
+.preset-font-5 h1,
+.preset-font-5 h2,
+.preset-font-5 h3,
+.preset-font-5 h4 {
+	font-family: 'Dancing Script', Georgia, Times, serif;
+}
+.preset-font-5 p {
+	font-family: 'Josefin Sans', Helvetica, Arial, sans-serif;
+}
+.preset-font-6 h1,
+.preset-font-6 h2,
+.preset-font-6 h3,
+.preset-font-6 h4 {
+	font-family: 'Allan', Helvetica, Arial, sans-serif;
+}
+.preset-font-6 p {
+	font-family: 'Cardo', Georgia, Times, serif;
+}
+.preset-font-7 h1,
+.preset-font-7 h2,
+.preset-font-7 h3,
+.preset-font-7 h4 {
+	font-family: 'Molengo', Georgia, Times, serif;
+}
+.preset-font-7 p {
+	font-family: 'Lekton', Helvetica, Arial, sans-serif;
+}
+.preset-font-8 h1,
+.preset-font-8 h2,
+.preset-font-8 h3,
+.preset-font-8 h4 {
+	font-family: 'Droid Serif', Georgia, Times, serif;
+}
+.preset-font-8 p {
+	font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
+}
+.preset-font-9 h1,
+.preset-font-9 h2,
+.preset-font-9 h3,
+.preset-font-9 h4 {
+	font-family: 'Corben', Georgia, Times, serif;
+}
+.preset-font-9 p {
+	font-family: 'Nobile', Helvetica, Arial, sans-serif;
+}
+.preset-font-10 h1,
+.preset-font-10 h2,
+.preset-font-10 h3,
+.preset-font-10 h4 {
+	font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+}
+.preset-font-10 p {
+	font-family: 'Vollkorn', Georgia, Times, serif;
+}
+a { 
+	outline: none; 
+	-webkit-transition:color 0.2s ease, background-image 0.4s ease;
+	   -moz-transition:color 0.2s ease, background-image 0.4s ease;
+		 -o-transition:color 0.2s ease, background-image 0.4s ease;
+			transition:color 0.2s ease, background-image 0.4s ease;	
+}
+a img { 
+	outline: 0;
+}
+input::-moz-focus-inner { 
+	border: 0; 
+}
+/*
+p {
+	word-wrap: break-word;
+	-ms-word-break: break-all;
+	/*overflow:hidden;*/
+	font-size: 14px;
+	line-height: 20px;
+}
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color:#312B2B;
+	font-family: 'Lucida Sans', 'Lucida Grande', verdana, sans-serif;
+	font-style: normal;
+	word-wrap:break-word;
+}
+h1 a, 
+h2 a {
+	text-decoration:none; 
+}
+blockquote {
+	border-left: 5px solid #4f4f4f;
+	font-style: italic;
+}
+/* ========================================================================== */
+/* General                                                                    */
+/* ========================================================================== */
+[id*="main-mod"], 
+[id*="footer-mod"] { 
+	position:absolute;
+}
+.img-replacement { 
+	background:#ccc; 
+	height:150px; 
+}
+.img-outer-border {
+	border: 1px solid #bbb; 
+	margin-bottom: 15px;
+}
+.img-inner-border {
+	border: 3px solid #fff;
+}
+.box-shadow {
+	-webkit-box-shadow: 0 0 5px #888;
+	   -moz-box-shadow: 0 0 5px #888;	
+			box-shadow: 0 0 5px #888;	
+}
+.one-edge-shadow {
+	-webkit-box-shadow: 0 12px 12px -12px black;
+	   -moz-box-shadow: 0 12px 12px -12px black;
+	        box-shadow: 0 12px 12px -12px black;
+}
+.center { 
+	text-align: center;
+}
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin: 1em 0;
+}
+.margin-bottom {
+	margin-bottom: 15px;
+}
+/* ========================================================================== */
+/* Header / Content                                                           */
+/* ========================================================================== */
+#header-body {
+	position: relative;
+	/*width: 940px;*/
+	margin: 0 auto;
+	height:100%;
+}
+.dropdown-menu {
+	padding: 0;
+	margin: 0px;
+}
+.dropdown-menu li a{
+	padding: 5px 20px;
+}
+.carousel-control {
+	-webkit-transition: opacity 0.7s ease;
+	   -moz-transition: opacity 0.7s ease;
+		 -o-transition: opacity 0.7s ease;
+			transition: opacity 0.7s ease;		
+}
+
+#header-body > .container, 
+#content-header > .container, 
+#content-wrapper, 
+#footer-wrapper, 
+#footer-fineprint > .container {
+	position: relative;	
+}
+#menu {
+	z-index: 2000;
+	position: absolute;
+}
+#menu.horizontal-menu ul.nav {
+	white-space: nowrap;
+}
+#menu.horizontal-menu ul.nav > li {
+  /*
+  display: inline-block !important;
+  float: none !important;
+  */
+  float: left;
+}
+/* ========================================================================== */
+/* Navigation                                                                 */
+/* ========================================================================== */
+.navbar.center .nav,
+.navbar.center .nav > li {
+  float:none;
+  display:inline-block;
+  *display:inline; /* ie7 fix */
+  *zoom:1; /* hasLayout ie7 trigger */
+  vertical-align: top;
+  margin: 0 12px;
+  font-size: 16px;
+}
+
+.navbar .nav > li > a div.menulink-wrapper {
+	position: relative;
+	overflow: hidden;
+}
+
+.nav .dropdown .caret-wrapper {
+	/*
+  	display: inline-block;
+	margin-left:5px;
+	float:right;
+	*/
+    display: block;
+    float: right;
+    margin-left: 5px;
+    /*position: absolute;*/
+
+	/*
+	position: absolute;
+	right: 5px;
+	*/
+	/*
+	*display: inline;
+	*/
+	*zoom: 1;
+}
+
+.horizontal-menu .nav .dropdown .caret-wrapper
+{
+    right: 1%;
+    top: 25%;		
+}
+
+.vertical-menu .nav .dropdown .caret-wrapper
+{
+    right: 5%;
+    top: 25%;		
+}
+
+/* ========================================================================== */
+/* Footer                                                                     */
+/* ========================================================================== */
+#footer-body .container, #footer-fineprint .container {
+	position:relative;
+	/*width:940px;*/
+	margin:0 auto
+}
+#footer-fineprint p {
+	margin-bottom: 0; 
+	padding: 0;
+}
+/* ========================================================================== */
+/* Button                                                                     */
+/* ========================================================================== */
+.btn { 
+	margin: 10px 0;
+}
+.btn:hover, 
+.btn:focus { 
+	background-position: top;
+}
+
+/* ========================================================================== */
+/* Form                                                                     */
+/* ========================================================================== */
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+	padding-right: 0;
+	padding-left: 0;
+	width: 100%;
+}
+input,
+textarea,
+.uneditable-input {
+  min-width: 20px;
+}
+
+.section > .container {
+	width: 940px;
+	margin: 0 auto;
+}

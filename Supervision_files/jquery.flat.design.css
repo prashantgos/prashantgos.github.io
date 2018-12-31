@@ -1,0 +1,173 @@
+/*          Text Input          */
+.flat-text-input-container {
+	position: relative;
+}
+
+.flat-text-input-container input[type="text"] {
+	border: 1px solid rgba(166,171,181,0.28);
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-radius: 0;
+	box-sizing: border-box;
+	background-color: #FFF;
+	color: #000;
+	height: 35px;
+	padding-left: 10px;
+	margin: 0;
+	box-shadow: none;
+}
+
+.flat-text-input-container input[type="text"]:focus {
+	border-bottom: 2px solid rgba(166,171,181,1);
+}
+
+.flat-text-input-container input[type="text"] + .fa.fa-search {
+	color: rgba(166,171,181,0.8);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.flat-text-input-container input[type="text"]:focus + .fa.fa-search {
+	color: rgba(166,171,181,1);
+}
+
+/*          Select Input          */
+.flat-select-container {
+	position: relative;
+	height: 36px;
+	z-index: 1;
+  background-color: #FFF;
+  color: #000;
+}
+
+.flat-select {
+	border-bottom: 1px solid;
+  border-color: rgba(166,171,181,0.28);
+	padding-left: 10px;
+	cursor: pointer;
+}
+
+.flat-select.flat-select-active {
+	border-top: 1px solid;
+	border-left: 1px solid;
+	border-right: 1px solid;
+  border-bottom: 0;
+  border-color: rgba(166,171,181,0.28);
+  box-shadow: 0 16px 20px 0 rgba(0,0,0,0.11);
+}
+
+.flat-select span {
+	font-size: 13px;
+	text-transform: uppercase;
+	font-weight: 300;
+	line-height: 36px;
+}
+
+.flat-select .flat-select-check,
+.flat-select.flat-select-active .flat-select-arrow {
+	display: none;
+}
+
+.flat-select .flat-select-arrow,
+.flat-select .flat-select-check {
+	font-size: 18px;
+  top: 10px;
+  position: absolute;
+  right: 10px;
+	background-image: url('/img/product_grid_sort_select.png');
+  background-repeat: no-repeat;
+}
+
+.flat-select .flat-select-arrow {
+	background-position: -47px -4px;
+  width: 10px;
+  height: 8px;
+  top: 15px;
+}
+
+.flat-select .flat-select-check {
+	background-position: -1px -3px;
+  width: 14px;
+  height: 12px;
+  top: 12px;
+}
+
+.flat-select.flat-select-active .flat-select-check {
+	display: block;
+}
+
+.flat-select-options {
+	display: none;
+	position: absolute;
+  top: 36px;
+  left: 0;
+  z-index: 2;
+  background-color: inherit;
+  width: auto;
+	padding: 10px 0;
+	box-shadow: 0 16px 20px 0 rgba(0,0,0,0.11);
+	border: 1px solid rgba(166,171,181,0.28);
+	box-sizing: border-box;
+	min-width: 100%;
+}
+
+.flat-select.flat-select-active + .flat-select-options {
+	display: block;
+}
+
+.flat-select-option {
+	position: relative;
+	height: 36px;
+	padding: 0 40px 0px 10px;
+	line-height: 36px;
+	cursor: pointer;
+	white-space: nowrap;
+}
+
+.flat-select-option.flat-select-option-selected {
+	display: none;
+}
+
+.flat-select-option.flat-select-option-disabled {
+  color: #B7B7B7;
+  cursor: default;
+	display: block !important;
+}
+
+.flat-select-option.flat-select-option-disabled:hover {
+	background-color: #FFF;
+}
+
+.flat-select-option:hover {
+	background-color: #EFF0F2;
+}
+
+.flat-select-multi .flat-select-option.flat-select-option-selected,
+.flat-select-multi .flat-select.flat-select-active .flat-select-arrow {
+	display: block;
+	font-weight: 600;
+}
+
+.flat-select-multi .flat-select.flat-select-active .flat-select-check {
+	display: none;
+}
+
+.flat-select-multi .flat-select-option .flat-select-arrow {
+	display: none;
+	background-position: -1px -3px;
+  width: 14px;
+  height: 12px;
+  top: 12px;
+	font-size: 18px;
+  position: absolute;
+  right: 10px;
+  background-image: url('/img/product_grid_sort_select.png');
+  background-repeat: no-repeat;
+}
+
+.flat-select-multi .flat-select-option.flat-select-option-selected .flat-select-arrow {
+	display: block;
+}

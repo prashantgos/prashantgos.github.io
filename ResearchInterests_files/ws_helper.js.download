@@ -1,0 +1,196 @@
+/* https://stackoverflow.com/questions/149055/how-can-i-format-numbers-as-money-in-javascript */
+Number.prototype.formatMoney = function(c, d, t) {
+	// (123456789.12345).formatMoney(2, '.', ',');
+	var n = this,
+	c = isNaN(c = Math.abs(c)) ? 2 : c,
+	d = d == undefined ? "." : d,
+	t = t == undefined ? "," : t,
+	s = n < 0 ? "-" : "",
+	i = String(parseInt(n = Math.abs(Number(n) || 0).toFixed(c))),
+	j = (j = i.length) > 3 ? j % 3 : 0;
+   return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
+};
+
+// https://stackoverflow.com/questions/2998784/how-to-output-integers-with-leading-zeros-in-javascript
+Number.prototype.pad = function(size) {
+	var s = String(this);
+	while (s.length < (size || 2)) {s = "0" + s;}
+	return s;
+}
+
+var encodeForHTML = function( html ) {
+	return document.createElement( 'a' ).appendChild(document.createTextNode( html ) ).parentNode.innerHTML;
+};
+
+var decodeForHTML = function( html ) {
+	var a = document.createElement( 'a' ); a.innerHTML = html;
+	return a.textContent;
+};
+
+var fm_getFileName = function(filePath) {
+	return String(filePath).split("/").pop();
+};
+
+var fm_getFilePath = function(data) {
+	var defaults = {
+		isThumbnail: false,
+		filename: "",
+		type: "i",
+		isOptimized: false,
+		spriteSheetURL: "/img/fm/fm_icons_sprite.png",
+		checkStock: true,
+		replaceStock: "",
+		siteID: ""
+	};
+
+	data = $.extend( {}, defaults , data);
+
+	var filename = data.filename;
+	var type = data.type;
+
+	if(data.checkStock && type === "i") {
+		var isStock = fm_isStock(filename);
+
+		if(isStock) {
+			if(data.replaceStock && !fm_isPublic(filename)) {
+				if(data.isThumbnail) {
+					return "/img/fm_stock/thumb/" + data.replaceStock;
+				} else {
+					return "/img/fm_stock/" + data.replaceStock;
+				}
+			} else {
+				if(data.isThumbnail) {
+					return "/img/fm_stock/thumb/" + filename;
+				} else {
+					return "/img/fm_stock/" + filename;
+				}
+			}
+		}
+	}
+
+	var siteId = data.siteID || parent.$('#siteId').val() || $("#siteId").val();
+
+	var uploadDirectory = "upload";
+	var thumbDirectory = "thumb/M";
+	var optimizeDirectory = "optimize";
+
+	var typeDirectory = "images";
+	if(type === "a") {
+		typeDirectory = "music";
+	} else if(type === "v") {
+		typeDirectory = "videos";
+	} else if(type === "d") {
+		typeDirectory = "documents";
+	}
+
+	if(data.isThumbnail) {
+		if(type === "i") {
+			return  "/" + uploadDirectory + "/" + siteId + "/" + typeDirectory + "/" + thumbDirectory + "/" + filename;
+		} else { // Use static preview icons. from sprite sheet. calculate the position in the css.
+			return data.spriteSheetURL;
+		}
+	} else {
+		if(data.isOptimized && type === "i") {
+			return  "/" + uploadDirectory + "/" + siteId + "/" + typeDirectory + "/" + optimizeDirectory + "/" + filename;
+		} else {
+			return  "/" + uploadDirectory + "/" + siteId + "/" + typeDirectory + "/" + filename;
+		}
+	}
+};
+
+var fm_isStock = function(filename) {
+	return (filename.indexOf("_stock_") !== -1);
+}
+
+var fm_isPublic = function(filename) {
+	return (filename.indexOf("_public_") !== -1);
+}
+
+var generateGUID = function() {
+	 function s4() {
+		return Math.floor((1 + Math.random()) * 0x10000)
+		  .toString(16)
+		  .substring(1);
+	  }
+	  var guid =  s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+		s4() + '-' + s4() + s4() + s4();
+		return guid.toUpperCase();
+};
+
+var getLocalDateFromUTC = function(dateUTC, toString) {
+	toString = typeof toString !== "undefined" ? toString : true;
+
+	var date = new Date(dateUTC + " UTC");
+
+	if(toString) {
+		date = date.toString();
+		return date.substring(4,7) + " " + date.substring(8,10) + " " +date.substring(11,15);
+	} else {
+		return date;
+	}
+};
+
+var numDaysBetweenDates = function(d1, d2) {
+  var diff = Math.abs(d1.getTime() - d2.getTime());
+  return diff / (1000 * 60 * 60 * 24);
+};
+
+var isElementColliding = function($el, $overlap) {
+	var rect1 = $.extend({}, $overlap[0].getBoundingClientRect());
+	var rect2 = $.extend({}, $el[0].getBoundingClientRect());
+
+	return !(
+		rect1.top > rect2.bottom - 1 ||
+		rect1.right < rect2.left - 1 ||
+		rect1.bottom < rect2.top - 1 ||
+		rect1.left > rect2.right - 1
+	);
+};
+
+// var array = new Array(['a', 'b'], ['c', 'z'], ['d', 'e', 'f']);
+var getPermutation = function(array, prefix) {
+	prefix = prefix || '';
+	if (!array.length)
+		return prefix;
+
+	var result = array[0].reduce(function (result, value) {
+		return result.concat(getPermutation(array.slice(1), prefix + value));
+	}, []);
+
+	return result;
+};
+
+var getSrcFromBackgroundImage = function(imgSrc) {
+	return (imgSrc.length > 7) ? imgSrc.substring(5, imgSrc.length - 2) : "";
+};
+
+var textareaToHTML = function(content) {
+	return String(content).replace(/\r?\n/g, '<br />');
+};
+
+var isVisibleInViewport = function(top, height) {
+	var $window = $(window);
+	var windowHeight = $window.height();
+	var scrollTop = $window.scrollTop();
+
+	return (top < (windowHeight + scrollTop)) && (top > (scrollTop - height));
+};
+
+var getPercent = function(a,b) {
+	return parseFloat((parseFloat(a) / parseFloat(b)) * 100);
+};
+
+var hasLocalStorage = function() {
+	var test = 'test';
+  try {
+    localStorage.setItem(test, test);
+    localStorage.removeItem(test);
+    return true;
+  } catch(e) {
+    return false;
+  }
+}
+
+var getUTCDate = function() {
+	return new Date().toUTCString().replace("GMT", "").trim();
+};
