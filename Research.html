@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research | Dr. Prashant Goswami</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="images/favicon.png">
+
+<style>
+
+*{box-sizing:border-box}
+
+body{
+    font-family:'Source Sans 3',sans-serif;
+    max-width:1200px;
+    margin:auto;
+    padding:35px;
+    color:#222;
+    line-height:1.7;
+}
+
+nav{
+    display:flex;
+    justify-content:center;
+    gap:6px;
+    background:#2C5D8A;
+    border-radius:8px;
+    margin-bottom:30px;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    padding:15px 22px;
+    font-weight:600;
+    border-radius:6px;
+}
+
+nav a.active{
+    background:#fff;
+    color:#2C5D8A;
+}
+
+nav a:hover{
+    background:#8B5A2B;
+}
+
+h1{
+    font-family:'Merriweather',serif;
+    color:#0F3E73;
+    margin-bottom:30px;
+}
+
+h2{
+    color:#0F3E73;
+    border-bottom:2px solid #E5E5E5;
+    padding-bottom:8px;
+    margin-top:45px;
+}
+
+
+/* ---------- Research Themes ---------- */
+
+.theme-card{
+
+    background:white;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+    transition:.25s;
+
+}
+
+.theme-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:28px;
+
+    margin-top:30px;
+
+}
+
+.theme-card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 8px 24px rgba(0,0,0,.15);
+
+}
+
+.theme-image{
+    flex:0 0 110px;
+}
+
+.theme-card img{
+
+    width:100%;
+
+    height:170px;
+
+    object-fit:cover;
+
+}
+
+.theme-body{
+    flex:1;
+}
+
+.theme-card h3{
+
+    margin:18px 18px 8px;
+
+    color:#163B65;
+
+    font-size:1.25rem;
+
+}
+
+.theme-body h3{
+    margin:0 0 6px;
+    color:#0F3E73;
+}
+
+.theme-topics{
+
+    margin:0 18px 20px;
+
+    color:#666;
+
+    font-size:.92rem;
+
+    line-height:1.5;
+
+}
+
+.theme-body p{
+    margin:0 0 10px;
+    line-height:1.45;
+}
+
+.theme-footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin:0 18px 20px;
+
+}
+.theme-footer a{
+    text-decoration:none;
+    font-weight:600;
+    color:#2C5D8A;
+}
+
+.theme-footer a:hover{
+    text-decoration:underline;
+}
+
+@media (max-width:900px) {
+
+    .theme-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .theme-card {
+        flex-direction: column;
+    }
+
+    .theme-image {
+        flex: none;
+    }
+
+    .theme-image img {
+        width: 100%;
+        height: auto;
+    }
+
+}
+
+footer{
+
+    margin-top:60px;
+
+    padding-top:20px;
+
+    padding-bottom:10px;
+
+    border-top:1px solid #ddd;
+
+    text-align:center;
+
+    color:#777;
+
+    clear:both;
+
+}
+
+@media(max-width:900px){
+
+    .theme{
+        flex-direction:column;
+    }
+
+    .theme img{
+        width:100%;
+        height:auto;
+    }
+
+}  
+
+.project {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+
+    margin: 18px 0;          /* was ~28px */
+    padding: 12px 0;         /* was ~18px */
+
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.project-thumb {
+    flex: 0 0 140px;
+}
+
+.project-thumb img {
+    width: 140px;
+    height: auto;
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.project-content h3 {
+    margin: 0 0 4px;
+    color: #0F3E73;
+    font-size: 1.25rem;
+}
+
+.project-meta {
+    margin: 0 0 6px;
+    font-size: 0.92rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.project-content p {
+    margin: 0 0 8px;
+    line-height: 1.45;
+}
+
+.project-links {
+    margin-top: 4px;
+}
+
+.btn-small {
+    display: inline-block;
+    padding: 7px 14px;
+    background: #2C5D8A;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.92rem;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.btn-small:hover {
+    background: #8B5A2B;
+}
+
+.btn-small i {
+    margin-right: 6px;
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Home</a>
+<a class="active" href="research.html">Research</a>
+<a href="publications.html">Publications</a>
+<a href="teaching.html">Teaching</a>
+<a href="people.html">People</a>
+<a href="service.html">Service</a>
+</nav>
+
+<h1>Research</h1>
+
+
+<!-- ========================================================= -->
+<h2>Research Projects</h2>
+<!-- ========================================================= -->
+
+
+<div class="project">
+
+    <div class="project-thumb">
+        <img src="images/projects/HINTS.png" alt="HINTS Research Profile">
+    </div>
+
+    <div class="project-content">
+
+        <h3>Human-Centered Intelligent Realities (HINTS)</h3>
+
+        <p class="project-meta">
+            <strong>Duration:</strong> 2022–2028 &nbsp; | &nbsp;
+            <strong>Type:</strong> Research Profile &nbsp; | &nbsp;
+            <strong>Institution:</strong> Blekinge Institute of Technology &nbsp; | &nbsp;
+            <strong>Role:</strong> Theme B and SP2 Leader
+        </p>
+
+        <p>
+            Led by Veronica Sundstedt, this project is an interdisciplinary
+            KKS (Knowledge Foundation) research profile with a budget exceeding
+            SEK 85 million. It brings together expertise in artificial
+            intelligence (AI), extended reality (XR), visualization,
+            healthcare, and human-centered computing to develop
+            next-generation personalized and intelligent environments together with 
+			several industrial partners (IKEA, NODA, Spotify, Ericsson, HealthyGaming, etc.).
+        </p>
+
+        <p>
+            Involved from the idea framing to application drafting in 2022, 
+			I lead Theme B, which focuses on the design of immersive and
+            intelligent environments and the understanding of human perception.
+            I also contribute to Theme C (Visualization), Theme E (Networking),
+            and the cross-cutting AI research that underpins all themes.
+        </p>
+		
+		<p>
+            <strong>Funding:</strong> SEK 85 million
+        </p>
+
+        <p class="project-links">
+            <a class="btn-small"
+               href="https://a.bth.se/hints/"
+               target="_blank"
+               rel="noopener">
+                <i class="fas fa-globe"></i> Project Website
+            </a>
+        </p>
+		
+
+
+    </div>
+
+</div>
+
+<!-- ========================================================= -->
+
+<div class="project">
+
+    <div class="project-thumb">
+        <img src="images/projects/LinnaeusPalme.jpg" alt="Linnaeus-Palme Project">
+    </div>
+
+    <div class="project-content">
+
+        <h3>Linnaeus–Palme Research and Teaching Collaboration</h3>
+
+        <p class="project-meta">
+            <strong>Duration:</strong> 2020–2021 &nbsp; | &nbsp;
+            <strong>Type:</strong> Planning Grant &nbsp; | &nbsp;
+            <strong>Institutions:</strong> Blekinge Institute of Technology &amp; IIT Mandi, India &nbsp; | &nbsp;
+            <strong>Role:</strong> Principal Investigator
+        </p>
+
+        <p>
+            Principal Investigator of a <strong>Linnaeus–Palme Planning Grant</strong> supporting the
+            establishment of a long-term research and teaching collaboration between
+            Blekinge Institute of Technology (Sweden) and the Indian Institute of
+            Technology (IIT) Mandi, India. The collaboration focused on eHealth,
+            student and faculty exchange, joint research activities, and the
+            development of future Indo–Swedish academic partnerships.
+        </p>
+
+        <p>
+            <strong>Funding:</strong> SEK 60,000
+        </p>
+
+    </div>
+
+</div>
+
+<!-- ========================================================= -->
+
+<div class="project">
+
+    <div class="project-thumb">
+        <img src="images/projects/PREDICT.jpg" alt="Linnaeus-Palme Project">
+    </div>
+
+    <div class="project-content">
+
+        <h3>PREDICT - Prediction of Prestress and Failure for Complex Load Cases</h3>
+
+        <p class="project-meta">
+            <strong>Duration:</strong> 2021–2023 &nbsp; | &nbsp;
+            <strong>Type:</strong> Project &nbsp; | &nbsp;
+            <strong>Institutions:</strong> Blekinge Institute of Technology &nbsp; | &nbsp;
+            <strong>Role:</strong> Observor
+        </p>
+
+        <p>
+            Led by Shafiqul Islam, PREDICT brings together expertise from Swedish industry, research actors in manufacturing processes, FE modeling and sheet metal forming experts.
+        </p>
+
+        <p>
+            <strong>Funding:</strong> SEK 4 million
+        </p>
+		
+		        <p class="project-links">
+            <a class="btn-small"
+               href="https://www.bth.se/english/research/research-projects/predict---prediction-of-prestress-and-failure-for-complex-load-cases"
+               target="_blank"
+               rel="noopener">
+                <i class="fas fa-globe"></i> Project Website
+            </a>
+        </p>
+
+    </div>
+
+</div>
+
+
+
+<!-- ========================================================= -->
+<h2>Grant Applications</h2>
+<!-- ========================================================= -->
+
+<p>
+Over the past decade, I have actively pursued competitive national and international
+research funding as both Principal Investigator and Co-Investigator. My proposals
+span artificial intelligence, computer graphics, healthcare, human-centered computing,
+extended reality, and international research collaboration.
+</p>
+
+<div class="highlight-box">
+
+    <h3>⭐ VAIBHAV Fellowship (2025)</h3>
+
+    <p>
+        <strong>(VAIBHAV) Fellowship proposal</strong> for the VAIshwik BHArtiya Vaigyanik
+        <em>“AI Shiksha: Culturally Adaptive Serious Games for Rural Youth Empowerment”</em>,
+        in collaboration with IIT Guwahati and IIIT Hyderabad.
+    </p>
+
+    <p>
+        <strong>Achievement:</strong> Selected and Presented for the <strong>second evaluation round</strong>
+        from <strong>227 international applications</strong>. Ultimately,
+        only 21 fellowships were awarded (which did not include ours).
+    </p>
+
+</div>
+
+<details>
+
+<summary><strong>Other Grant Applications (2016–Present)</strong></summary>
+
+<ul class="grant-list">
+
+<li><strong>2026</strong> – Vinnova (PI): Collaboration with the University of Louisiana, USA, on AI, digital infrastructure and cybersecurity.</li>
+
+<li><strong>2026</strong> – Swedish Research Council (VR) (PI): Adaptive simulation of large-scale snow avalanches in complex terrains (with USP, Brazil). </li>
+
+<li><strong>2026</strong> – MAHA MedTech Mission (Co-PI): <em>Cardi-AI</em> for AI-powered wearable heart monitoring (with IIT-Guwahati). <em>Reached Second-round review.</em></li>
+
+<li><strong>2026</strong> – IIT Guwahati Advanced Research Grant (Co-PI): AI for low-resource healthcare settings. <em>Reached Second-round review.</em></li>
+
+<li><strong>2025</strong> – Åforsk (PI): AI-based defect detection for inline manufacturing.</li>
+
+<li><strong>2025</strong> – Crafoord Foundation (PI): Real-time physics-based snow simulation for games and VR.</li>
+
+<li><strong>2024</strong> – Vinnova (PI): <em>Cardi-AI</em> home-based heart monitoring system (with IIT-Guwahati & RCUPE Pvt. Ltd.).</li>
+
+<!--<li><strong>2024</strong> – KKS AVANS (Co-PI): Development of an MSc Programme in Game Engineering and Interactive Systems. <strong>Approved.</strong></li>-->
+
+<li><strong>2023</strong> – STINT (PI): Learning perspectives on Generative AI-based software tools (with IIT-Guwahati).</li>
+
+<li><strong>2022</strong> – Forte (PI): Serious games for depression healing in senior citizens (with IIT-Mandi).</li>
+
+<li><strong>2020</strong> – Vinnova (PI): Aerosol-mediated infection detection and sensing techniques (with IIT-Mandi).</li>
+
+<li><strong>2019</strong> – Vinnova (Co-PI): A new way of handling sensor data.</li>
+
+<li><strong>2016</strong> – SSF (Co-PI): Game data analytics.</li>
+
+</ul>
+
+</details>
+
+<!-- ========================================================= -->
+<h2>Research Themes</h2>
+<!-- ========================================================= -->
+
+
+<div class="theme-grid">
+
+    <div class="theme-card">
+
+        <img src="images/papers/HPG24.png"
+             alt="Snow-Based Simulation">
+
+        <h3>Snow Simulation (CG/Games)</h3>
+
+        <div class="theme-topics">
+            Snow • DEM • GPU
+        </div>
+
+        <div class="theme-footer">
+
+            <span class="theme-count"
+                  data-theme="snow-simulation"></span>
+
+            <a class="theme-link"
+               data-theme="snow-simulation"
+               href="#">
+               View Publications →
+            </a>
+
+        </div>
+
+    </div>
+
+      <div class="theme-card">
+
+        <img src="images/papers/GIPP_ICIR_2025.png"
+             alt="Computer Games">
+
+        <h3>Computer Games</h3>
+
+        <div class="theme-topics">
+            Education • Pathfinding • XR
+        </div>
+
+        <div class="theme-footer">
+
+            <span class="theme-count"
+                  data-theme="computer-games"></span>
+
+            <a class="theme-link"
+               data-theme="computer-games"
+               href="#">
+               View Publications →
+            </a>
+
+        </div>
+
+    </div>
+	
+	<div class="theme-card">
+
+        <img src="images/papers/Furniture_ICIR_2025.png"
+             alt="Human-Centered Computing">
+
+        <h3>Human-Centered Comp. (CG/Games)</h3>
+
+        <div class="theme-topics">
+            Immersive • Smart Perception  • AI • XR
+        </div>
+
+        <div class="theme-footer">
+
+            <span class="theme-count"
+                  data-theme="human-centered"></span>
+
+            <a class="theme-link"
+               data-theme="human-centered"
+               href="#">
+               View Publications →
+            </a>
+
+        </div>
+
+    </div>
+	
+	<div class="theme-card">
+
+        <img src="images/papers/Frontiers23.png"
+             alt="Cloud-Based Simulation">
+
+        <h3>Cloud Animation (CG/Games)</h3>
+
+        <div class="theme-topics">
+            Animation • Simulation • Lightning • GPU • AI
+        </div>
+
+        <div class="theme-footer">
+
+            <span class="theme-count"
+                  data-theme="cloud-simulation"></span>
+
+            <a class="theme-link"
+               data-theme="cloud-simulation"
+               href="#">
+               View Publications →
+            </a>
+
+        </div>
+
+    </div>
+	
+	<div class="theme-card">
+
+        <img src="images/papers/JCGT2021.png"
+             alt="Real-time Rendering">
+
+        <h3>Real-time Rendering (CG/Games)</h3>
+
+        <div class="theme-topics">
+            Polarization • Neural Shading • Selective Rasterization • AI
+        </div>
+
+        <div class="theme-footer">
+
+            <span class="theme-count"
+                  data-theme="real-time-rendering"></span>
+
+            <a class="theme-link"
+               data-theme="real-time-rendering"
+               href="#">
+               View Publications →
+            </a>
+
+        </div>
+	  </div>	
+		
+	<div class="theme-card">
+
+        <img src="images/papers/ProductDesign.png"
+             alt="Product Design">
+
+        <h3>Product Design</h3>
+
+        <div class="theme-topics">
+            Design • Human-Centered • AI
+        </div>
+
+        <div class="theme-footer">
+
+            <span class="theme-count"
+                  data-theme="product-design"></span>
+
+            <a class="theme-link"
+               data-theme="product-design"
+               href="#">
+               View Publications →
+            </a>
+
+        </div>	
+	
+	 </div>	
+	 
+	<div class="theme-card">
+
+        <img src="images/papers/AppliedAI.png"
+             alt="Applied Artificial Intelligence">
+
+        <h3>Applied Artificial Intelligence</h3>
+
+        <div class="theme-topics">
+            AI • Machine Learning • Federated Learning
+        </div>
+
+        <div class="theme-footer">
+
+            <span class="theme-count"
+                  data-theme="artificial-intelligence,machine-learning,federated-learning"></span>
+
+            <a class="theme-link"
+               data-theme="artificial-intelligence,machine-learning,federated-learning"
+               href="#">
+               View Publications →
+            </a>
+
+        </div>	
+	
+	 </div>		 
+	 
+	<div class="theme-card">
+
+        <img src="images/papers/SmartHealthcare.png"
+             alt="Healthcare">
+
+        <h3>Smart Healthcare</h3>
+
+        <div class="theme-topics">
+            Patient-centric • AI • Diagnostics • Design
+        </div>
+
+        <div class="theme-footer">
+
+            <span class="theme-count"
+                  data-theme="healthcare"></span>
+
+            <a class="theme-link"
+               data-theme="healthcare"
+               href="#">
+               View Publications →
+            </a>
+
+        </div>	
+	
+	 </div>		 	 
+	 
+	</div>
+
+    </div>
+
+<script src="Research.js"></script>
+
+
+<footer>
+
+© 2026 Dr. Prashant Goswami · Blekinge Institute of Technology
+
+</footer>
+
+
+<!-- Default Statcounter code for Homepage https://prashantgos.github.io/ -->
+<script type="text/javascript">
+var sc_project=11916227; 
+var sc_invisible=1; 
+var sc_security="c053b42c"; 
+var sc_https=1; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js" async></script>
+<noscript><div class="statcounter"><a title="Web Analytics"
+href="http://statcounter.com/" target="_blank"><img class="statcounter"
+src="//c.statcounter.com/11916227/0/c053b42c/1/" alt="Web
+Analytics"></a></div></noscript>
+
+<div id="clustrmaps-widget"></div><script type="text/javascript">var _clustrmaps = {'url' : 'https://prashantgos.github.io/', 'user' : 11916227, 'server' : '2', 'id' : 'clustrmaps-widget', 'version' : 1, 'date' : '2025-02-28', 'lang' : 'en', 'corners' : 'square' };(function (){ var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'http://www2.clustrmaps.com/counter/map.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);})();</script><noscript><a href="http://www2.clustrmaps.com/user/11916227"><img src="http://www2.clustrmaps.com/stats/maps-no_clusters/prashantgos.github.io/index.html-thumb.jpg" alt="Locations of visitors to this page" /></a></noscript>
+
+<!-- End of Statcounter Code -->
+
+</body>
+</html>

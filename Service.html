@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Service | Dr. Prashant Goswami</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Source+Sans+3:wght@300;400;600;700&display=swap"
+rel="stylesheet">
+
+<link rel="icon" type="image/png" href="images/favicon.png">
+
+<style>
+
+body{
+    font-family:'Source Sans 3',sans-serif;
+    max-width:1200px;
+    margin:auto;
+    padding:35px;
+    color:#222;
+    line-height:1.7;
+}
+
+nav{
+    display:flex;
+    justify-content:center;
+    gap:6px;
+    background:#2C5D8A;
+    border-radius:8px;
+    margin-bottom:40px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:15px 22px;
+    font-weight:600;
+}
+
+nav a.active{
+    background:white;
+    color:#2C5D8A;
+    border-radius:6px;
+}
+
+h1{
+    font-family:'Merriweather',serif;
+    color:#0F3E73;
+}
+
+h2{
+    color:#0F3E73;
+    margin-top:50px;
+}
+
+.hero{
+
+    background:#F6F8FB;
+    border-left:6px solid #2C5D8A;
+    padding:30px;
+    border-radius:8px;
+
+}
+
+.stats{
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    margin-top:25px;
+
+}
+
+.stat{
+
+    background:white;
+    border:1px solid #ddd;
+    border-radius:8px;
+    text-align:center;
+    padding:20px;
+
+}
+
+.stat .number{
+
+    font-size:2rem;
+    font-weight:bold;
+    color:#2C5D8A;
+
+}
+
+.course{
+
+    display:flex;
+    gap:16px;
+    align-items:flex-start;
+
+    padding:14px 18px;
+    margin:12px 0;
+
+}
+
+.course img{
+
+    width:80px;
+    height:80px;
+    object-fit:cover;
+    border-radius:6px;
+    flex-shrink:0;
+
+}
+
+.course-content h3{
+
+    margin:0;
+    line-height:1.15;
+
+}
+
+.course-role{
+
+    margin:2px 0 6px 0;
+
+    font-size:0.9rem;
+
+}
+
+.section-intro{
+
+    margin-bottom:20px;
+
+    color:#555;
+
+}
+
+
+.tpc-year{
+
+    margin-bottom:25px;
+
+}
+
+.tpc-year h3{
+
+    margin:0 0 10px 0;
+
+    color:#2C5D8A;
+
+    border-left:4px solid #2C5D8A;
+
+    padding-left:10px;
+
+    font-size:1.15rem;
+
+}
+
+.tpc-year ul{
+
+    margin:0;
+
+    padding-left:25px;
+
+}
+
+.tpc-year li{
+
+    margin:6px 0;
+
+    line-height:1.45;
+
+}
+
+.tpc-years{
+    color:#555;
+    font-size:0.95rem;
+    line-height:1.5;
+}
+
+.service-item{
+    display:flex;
+    align-items:flex-start;
+    gap:14px;
+
+    padding:10px 0;
+}
+
+.service-item img{
+    width:60px;
+    height:60px;
+    flex-shrink:0;
+}
+
+.service-content{
+    flex:1;
+
+    /* THIS is the separator */
+    border-bottom:1px solid #E5E5E5;
+
+    /* Shorten the line */
+    padding-bottom:10px;
+    margin-right:120px;
+}
+
+.service-item:last-child .service-content{
+    border-bottom:none;
+}
+
+
+
+.service-item:last-child{
+
+    border-bottom:none;
+
+}
+
+
+
+.service-content h3{
+
+    margin:0;
+
+    font-size:1.15rem;
+
+    line-height:1.15;
+
+}
+
+.service-role{
+
+    margin:2px 0 4px 0;
+
+    color:#8B5A2B;
+
+    font-size:0.90rem;
+
+    font-weight:600;
+
+}
+
+.service-description{
+
+    margin:0;
+
+    font-size:0.92rem;
+
+    line-height:1.35;
+
+}
+
+.service-description a{
+
+    color:#2C5D8A;
+
+    text-decoration:none;
+
+}
+
+.service-description a:hover{
+
+    text-decoration:underline;
+
+}
+
+
+.service-section{
+
+    margin:20px 0;
+
+}
+
+.service-section summary{
+
+    list-style:none;
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:10px 14px;
+
+    background:#f7f9fc;
+
+    border:1px solid #dfe7f1;
+
+    border-radius:8px;
+
+    color:#0F3E73;
+
+    font-weight:700;
+
+}
+
+.service-section summary:hover{
+
+    background:#eef4fb;
+
+}
+
+.service-section summary::-webkit-details-marker{
+
+    display:none;
+
+}
+
+.service-section summary::before{
+
+    content:"▶";
+
+    font-size:.8em;
+
+    transition:.2s;
+
+}
+
+.service-section[open] summary::before{
+
+    transform:rotate(90deg);
+
+}
+
+.inline-list{
+
+    margin:10px 0 25px 20px;
+    padding:0;
+
+}
+
+.inline-list li{
+
+    white-space:nowrap;
+    list-style:disc;
+
+}
+
+.course-role .separator{
+
+    margin:0 8px;
+
+    color:#B8B8B8;
+
+}
+
+.course-info{
+
+    display:grid;
+    grid-template-columns:140px 1fr 120px 1fr;
+    gap:10px 20px;
+
+    margin:18px 0;
+    padding:16px 20px;
+
+    background:#F4FAF5;
+    border-left:4px solid #4F8A5B;
+
+    border-radius:6px;
+}
+
+.course-info strong{
+    color:#2E6B3E;
+}
+
+.course-info{
+
+    display:grid;
+
+    grid-template-columns:140px 1fr 120px 1fr;
+
+    gap:10px 20px;
+
+    width:100%;
+
+    box-sizing:border-box;
+
+    margin:18px 0;
+
+    padding:16px 20px;
+
+    background:#F4FAF5;
+
+    border-left:4px solid #4F8A5B;
+
+    border-radius:6px;
+
+}
+
+.course img{
+
+    width:120px;
+    height:160px;
+
+    object-fit:cover;
+
+    border-radius:6px;
+
+    background:#ddd;
+
+}
+
+.course-content{
+
+    flex:1;
+
+    width:100%;
+}
+
+.course-content a{
+
+    color:#2C5D8A;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+.course-content a:hover{
+
+    text-decoration:underline;
+
+}
+
+.course-mini{
+
+    display:flex;
+    gap:20px;
+
+    margin:20px 0;
+
+    padding:18px;
+
+    border:1px solid #ddd;
+
+    border-radius:8px;
+
+    background:#fafafa;
+
+}
+
+.course-mini img{
+
+    width:80px;
+    height:110px;
+
+    object-fit:cover;
+
+    border-radius:6px;
+
+}
+
+.course-mini-content{
+
+    flex:1;
+
+}
+
+.previous-teaching{
+
+    margin-top:50px;
+
+    padding:20px 24px;
+
+    background:#F8F9FA;
+
+    border-left:5px solid #8B5A2B;
+
+    border-radius:8px;
+
+}
+
+.previous-teaching p{
+
+    margin:0 0 10px 0;
+
+}
+
+.previous-teaching p:last-child{
+
+    margin-bottom:0;
+
+}
+
+.previous-teaching a{
+
+    color:#2C5D8A;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+}
+
+.previous-teaching a:hover{
+
+    text-decoration:underline;
+
+}
+
+.meta{
+
+    color:#666;
+    margin-bottom:15px;
+
+}
+
+.offering{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:4px 0;
+
+    border-top:1px solid #f2f2f2;
+
+    line-height:1.3;
+
+}
+
+.offering:first-of-type{
+    border-top:none;
+}
+
+.offering span{
+
+    font-size:0.95rem;
+
+}
+
+
+
+.rating{
+
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+}
+
+.rating .stars{
+    color:#E5A100;
+    letter-spacing:2px;
+    font-size:1.05rem;
+}
+
+.rating .score{
+    color:#666;
+    font-size:0.9rem;
+    font-weight:600;
+}
+
+.rating .unavailable{
+    color:#999;
+    font-style:italic;
+}
+
+
+.simple-list{
+
+    margin:10px 0 25px 0;
+
+}
+
+.simple-list ul{
+
+    margin:0;
+    padding-left:22px;
+
+    columns:1;          /* important */
+
+}
+
+.simple-list li{
+
+    margin:6px 0;
+
+    white-space:nowrap; /* keep each entry on one line */
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+}
+
+footer{
+
+    margin-top:70px;
+    border-top:1px solid #ddd;
+    text-align:center;
+    color:#777;
+    padding-top:20px;
+
+}
+
+@media(max-width:800px){
+
+.stats{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+.course{
+
+flex-direction:column;
+
+}
+
+.course img{
+
+width:100px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="research.html">Research</a>
+<a href="publications.html">Publications</a>
+<a href="teaching.html">Teaching</a>
+<a href="people.html">People</a>
+<a class="active" href="service.html">Service</a>
+
+</nav>
+
+
+<h1>Professional Service</h1>
+
+<!--<div class="hero">
+
+<p>
+
+I actively contribute to the scientific community through editorial activities,
+conference organization, peer reviewing, grant evaluation, and professional
+service to international journals and conferences.
+
+</p>
+
+</div>-->
+
+
+
+
+<!-- ======================================================= -->
+<h2>Editorial Activities</h2>
+<!-- ======================================================= -->
+<div class="service-item">
+
+    <img src="images/service/EditorThumb.png">
+
+    <div class="service-content">
+
+        <h3>Education Sciences</h3>
+
+        <div class="service-role">
+
+            Guest Editor • 2022–2023
+
+        </div>
+
+        <div class="service-description">
+
+            <a href="https://www.mdpi.com/journal/education/special_issues/Education_VR">
+
+                Higher Education and Its Improvement through Virtual Reality
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ====================================================== -->
+<div class="service-item">
+
+    <img src="images/service/FrontiersGuestEditor.jpg">
+
+    <div class="service-content">
+
+        <h3>Frontiers in Virtual Reality</h3>
+
+        <div class="service-role">
+
+            Guest Editor • 2022
+
+        </div>
+
+        <div class="service-description">
+
+            <a href="https://www.frontiersin.org/research-topics/25084/acquiring-exploring-and-spreading-cultural-heritage-with-immersive-technologies">
+
+                Acquiring, Exploring and Spreading Cultural Heritage with Immersive Technologies
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ====================================================== -->
+<div class="service-item">
+
+    <img src="images/service/FrontiersThumb.jpg">
+
+    <div class="service-content">
+
+        <h3>Frontiers in Computer Science</h3>
+
+        <div class="service-role">
+
+            Review Editor • 2022-now
+
+        </div>
+
+        <div class="service-description">
+
+            <a href="https://loop.frontiersin.org/people/1417465/overview">
+
+                Computer Graphics and Visualization
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- ====================================================== -->
+<div class="service-item">
+
+    <img src="images/service/EditorThumb.png">
+
+    <div class="service-content">
+
+        <h3>Journal of Game Studies</h3>
+
+        <div class="service-role">
+
+            Editorial Board • 2025–now
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ====================================================== -->
+
+
+
+
+
+<!-- ======================================================= -->
+<h2>Conference Organization</h2>
+<!-- ======================================================= -->
+
+<div class="service-item">
+
+    <img src="images/service/hax-headers.png"
+         alt="IEEE HAXD 2026">
+
+    <div class="service-content">
+
+        <h3>IEEE HAXD 2026</h3>
+
+        <div class="service-role">
+            Program Chair • 2026
+        </div>
+
+        <div class="service-description">
+
+            <a href="https://intelligent-systems.net/haxd2026/"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                IEEE International Conference on Humanized AI and Experience Design (HAXD), Valencia, Spain
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="service-item">
+
+    <img src="images/service/hax-headers.png"
+         alt="IEEE HAMI">
+
+    <div class="service-content">
+
+        <h3>IEEE HAMI Workshop</h3>
+
+        <div class="service-role">
+            Workshop Organizer • 2026
+        </div>
+
+        <div class="service-description">
+
+            <a href="https://hamiworkshop.github.io/"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                Human-AI Interaction on Mobile Devices, co-located with IEEE HAXD 2026, Valencia, Spain
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="service-item">
+
+    <img src="images/service/Indis_logo_full.svg"
+         alt="INDIS 2026">
+
+    <div class="service-content">
+
+        <h3>INDIS Conference</h3>
+
+        <div class="service-role">
+            International Advisory Board • 2026
+        </div>
+
+        <div class="service-description">
+
+            <a href="https://event.iitg.ac.in/indis2026/"
+               target="_blank"
+               rel="noopener noreferrer">
+
+               International Conference on Design & Innovation Studies, IIT Guwahati, India
+
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ======================================================= -->
+<h2>Funding Evaluator</h2>
+<!-- ======================================================= -->
+
+<div class="simple-list">
+
+<ul>
+
+<li><strong>Spark,</strong> Swiss National Science Foundation (SNSF)</li>
+
+</ul>
+
+</div>
+
+
+<!-- ======================================================= -->
+<h2><i class="fa-solid fa-users-gear"></i> Technical Program Committee (TPC)</h2>
+<!-- ======================================================= -->
+
+<details class="service-section">
+
+<summary>
+    <i class="fa-solid fa-list-check"></i>
+    Conference TPC Memberships
+    <span class="count">(15 conferences)</span>
+</summary>
+
+<p class="section-intro">
+I have served (or am currently serve) as a member of the
+<strong>International Technical Program Committee (TPC)</strong>
+for the following conferences.
+</p>
+
+<div class="simple-list">
+
+<ul>
+
+<li>
+<strong>High Performance Graphics (HPG)</strong><br>
+2026 (Los Angeles, USA)
+</li>
+
+<li>
+<strong>Smart Tools and Applications in Graphics (STAG)</strong><br>
+2020 (Online) •
+2021 (Online) •
+2022 (Cagliari, Italy) •
+2023 (Matera, Italy) •
+2024 (Verona, Italy) •
+2025 (Genoa, Italy) •
+2026 (Catania (Italy)
+</li>
+
+<li>
+<strong>IEEE CTSoc Gaming, Entertainment and Media (IEEE GEM)</strong><br>
+2023 (Bridgetown, Barbados) •
+2024 (Torino, Italy) •
+2025 (Kaohsiung, Taiwan) •
+2026 (Berlin, Germany)
+</li>
+
+<li>
+<strong> International Conference on Computer Graphics, Interaction, Visualization Theory and Applications (GRIVAPP, GRAPP before)</strong><br>
+2024 (Rome, Italy) •
+2025 (Porto, Portugal) •
+2026 (Marbella, Spain)
+</li>
+
+<li>
+<strong>International Conference on 3D Web Technology (ACM Web3D)</strong><br>
+2024 (Guimarães, Portugal) •
+2025 (Siena, Italy)
+</li>
+
+<li>
+<strong>IEEE International Conference on Intelligent Reality (ICIR)</strong><br>
+2025 (Boston, USA) •
+2026 (Pisa, Italy)
+</li>
+
+<li>
+<strong>Workshop on Virtual Reality Interaction and Physical Simulation (VRIPHYS)</strong><br>
+2018 (Delft, Netherlands) •
+2019 (Genova, Italy)
+</li>
+
+<li>
+<strong>Applications and Systems of Visual Paradigms (VISUAL, IARIA)</strong><br>
+2017 (Nice, France) •
+2018 (Venice, Italy) •
+2019 (Rome, Italy) •
+2020 (Porto, Portugal) • 
+2021 (Nice, France) •
+2022 (Venice, Italy) •
+2023 (Barcelona, Spain) •<br>
+2024 (Athens, Greece) •
+2025 (Lisbon, Portugal) •
+2026 (Valencia, Spain)
+</li>
+
+<li>
+<strong>International Conference on Fog and Mobile Edge Computing (FMEC)</strong><br>
+2024 (Malmö, Sweden) •
+2025 (Tampa, USA)
+</li>
+
+
+<li>
+<strong>International Conference on Web Information Systems and Technologies (WEBIST)</strong><br>
+2024 (Lisbon, Portugal) •
+2025 (Marbella, Spain)
+</li>
+
+<li>
+<strong>IEEE Conference on Human-AI Interaction and Experience Design (IEEE HAXD)</strong><br>
+2026 (Valencia, Spain)
+</li>
+
+<li>
+<strong>IEEE International Conference on Federated Learning and Intelligent Computing Systems (FLICS)</strong><br>
+2026 (Valencia, Spain)
+</li>
+
+<li>
+<strong>Next Generation AI Systems (NGEN-AI)</strong><br>
+2026 (Trento, Italy)
+</li>
+
+<li>
+<strong>International Conference on Imaging (IOCIM)</strong><br>
+2026 (Online)
+</li>
+
+<li>
+<strong>International Conference on Digital Image Processing and Vision (ICDIPV)</strong><br>
+2025 (Copenhagen, Denmark)
+</li>
+
+</ul>
+
+</div>
+
+</details>
+
+
+<!-- ======================================================= -->
+<h2><i class="fa-solid fa-users-gear"></i> Journal & Conference Reviewing</h2>
+<!-- ======================================================= -->
+
+<details class="service-section">
+
+<summary>
+    <i class="fa-solid fa-list-check"></i>
+    Conference TPC Memberships
+    <span class="count">(15 conferences)</span>
+</summary>
+
+<p class="section-intro">
+I have served (or am currently serve) as a member of the
+<strong>International Technical Program Committee (TPC)</strong>
+for the following conferences.
+</p>
+
+<div class="simple-list">
+
+<ul>
+
+<li>ACM Journal on Computing and Cultural Heritage</li>
+<li>ACM SIGGRAPH Asia</li>
+<li>ACM SIGGRAPH High-Performance Graphics</li>
+<li>ACM SIGSPATIAL International Conference</li>
+<li>ACM Transactions on Applied Perception</li>
+
+<li>Artificial Intelligence in Medicine</li>
+<li>Computer Graphics Forum</li>
+<li>Computer Graphics International</li>
+<li>Computers &amp; Graphics</li>
+<li>Cogent Education</li>
+
+<li>Engineering Applications of Artificial Intelligence</li>
+<li>Eurographics</li>
+<li>Eurographics Symposium on Parallel Graphics and Visualization</li>
+<li>Graphical Models</li>
+<li>IEEE Access</li>
+
+<li>IEEE Computer Graphics and Applications</li>
+<li>IEEE Conference on Virtual Reality and 3D User Interfaces (IEEE VR)</li>
+<li>IEEE Transactions on Parallel and Distributed Systems</li>
+<li>IEEE Transactions on Systems, Man, and Cybernetics: Systems</li>
+<li>IEEE Transactions on Visualization and Computer Graphics</li>
+
+<li>IEEE Visualization (VIS)</li>
+<li>International Journal of Image and Graphics</li>
+<li>Journal of Parallel and Distributed Computing</li>
+<li>Journal of Zhejiang University SCIENCE C (Computers &amp; Electronics)</li>
+<li>Pacific Graphics</li>
+
+<li>PeerJ</li>
+<li>Signal, Image and Video Processing</li>
+<li>Symmetry</li>
+<li>The Visual Computer</li>
+<li>Workshop on Virtual Reality Interaction and Physical Simulation (VRIPHYS)</li>
+
+<li>World Haptics Conference</li>
+
+</ul>
+
+</div>
+
+</details>
+
+
+
+<!-- ======================================================= -->
+<h2>Session Chair</h2>
+<!-- ======================================================= -->
+
+<ul class="inline-list">
+    <li><strong>International Conference on Fog and Mobile Edge Computing (FMEC)</strong> • Session Chair • 2024 (Malmö, Sweden)</li>
+</ul>
+
+
+<!-- ======================================================= -->
+<h2>Book Reviewing</h2>
+<!-- ======================================================= -->
+
+<div class="simple-list">
+
+<ul>
+
+<li><strong>Bentham Science Publishers</strong> • Book Manuscript Reviewer</li>
+
+</ul>
+
+</div>
+
+
+<!-- ======================================================= -->
+<h2>Book Reviewing</h2>
+<!-- ======================================================= -->
+
+<div class="simple-list">
+
+<ul>
+
+<li><strong>Bentham Science Publishers</strong> • Book Manuscript Reviewer</li>
+
+</ul>
+
+</div>
+
+
+<!-- ======================================================= -->
+<h2>Ph.D. Defense Committees</h2>
+<!-- ======================================================= -->
+
+<div class="simple-list">
+
+<ul>
+
+<li><strong>Alexander Barlo</strong> • Substitute Member, Ph.D. Grading Committee • 2025</li>
+
+<li><strong>Yanhui Su</strong> • Member, Ph.D. Grading Committee • 2023</li>
+
+<li><strong>Vinicius Ludwig Barbosa</strong> • Substitute Member, Ph.D. Grading Committee • 2022</li>
+
+</ul>
+
+</div>
+
+
+
+<!-- ======================================================= -->
+<h2>Academic Evaluation & Recruitment</h2>
+<!-- ======================================================= -->
+
+<div class="simple-list">
+
+<ul>
+
+<li><strong>Universitat Pompeu Fabra (UPF Barcelona)</strong> • Selection Committee, Senior Lecturer in Computer Graphics • 2024</li>
+
+<li><strong>Malmö University</strong> • External Reviewer, Associate Senior Lecturer in Games • 2022</li>
+
+</ul>
+
+</div>
+
+<!-- ======================================================= -->
+<h2>Professional Memberships</h2>
+<!-- ======================================================= -->
+
+<div class="simple-list">
+
+<ul>
+
+<li><strong>IEEE Consumer Technology Society (CTSoc)</strong> Entertainment and Gaming Technical Committee (ENT TC)</li>
+
+<li><strong>ACM </strong>(previously)</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+
+<footer>
+
+© 2026 Dr. Prashant Goswami · Blekinge Institute of Technology
+
+</footer>
+
+<!-- Default Statcounter code for Homepage https://prashantgos.github.io/ -->
+<script type="text/javascript">
+var sc_project=11916227; 
+var sc_invisible=1; 
+var sc_security="c053b42c"; 
+var sc_https=1; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js" async></script>
+<noscript><div class="statcounter"><a title="Web Analytics"
+href="http://statcounter.com/" target="_blank"><img class="statcounter"
+src="//c.statcounter.com/11916227/0/c053b42c/1/" alt="Web
+Analytics"></a></div></noscript>
+
+<div id="clustrmaps-widget"></div><script type="text/javascript">var _clustrmaps = {'url' : 'https://prashantgos.github.io/', 'user' : 11916227, 'server' : '2', 'id' : 'clustrmaps-widget', 'version' : 1, 'date' : '2025-02-28', 'lang' : 'en', 'corners' : 'square' };(function (){ var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'http://www2.clustrmaps.com/counter/map.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);})();</script><noscript><a href="http://www2.clustrmaps.com/user/11916227"><img src="http://www2.clustrmaps.com/stats/maps-no_clusters/prashantgos.github.io/index.html-thumb.jpg" alt="Locations of visitors to this page" /></a></noscript>
+
+<!-- End of Statcounter Code -->
+
+</body>
+</html>
