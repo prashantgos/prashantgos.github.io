@@ -11,12 +11,27 @@
 
 <style>
 *{box-sizing:border-box;}
-body{font-family:'Source Sans 3',sans-serif;max-width:1200px;margin:auto;padding:35px;color:#222;line-height:1.7;}
-h1{font-family:'Merriweather',serif;color:#0F3E73;margin:0 0 10px;font-size:3rem;}
+body
+{
+	font-family:'Source Sans 3',sans-serif;
+	font-size:clamp(15px, 1vw, 18px);
+    width:min(96vw, 1400px);
+
+    margin:auto;
+
+    padding:1.5vw;
+	color:#222;line-height:1.7;
+}
+
+h1{
+font-family:'Merriweather',serif;color:#0F3E73;margin:0 0 10px;
+font-size:clamp(2.2rem, 4vw, 3rem);
+}
+
 h2{
     margin-top:28px;
     margin-bottom:12px;
-    font-size:1.7rem;
+    font-size:clamp(1.5rem, 2.5vw, 2rem);
 }
 .header{display:flex;justify-content:space-between;align-items:flex-start;gap:40px;}
 .info{flex:1;}
@@ -25,9 +40,21 @@ h2{
 .affiliation{color:#5A5A5A;font-size:.98rem;font-style:italic;line-height:1.55;margin-bottom:16px;}
 .contact p{margin:6px 0}.contact i{width:22px;margin-right:10px;color:#2C5D8A;}
 .email-link{color:#2C5D8A;text-decoration:none;font-weight:600;}
-.photo img{width:245px;border-radius:12px;border:5px solid #fff;box-shadow:0 8px 20px rgba(0,0,0,.18);}
+.photo img
+{
+width:clamp(170px, 18vw, 245px);
+border-radius:12px;border:5px solid #fff;box-shadow:0 8px 20px rgba(0,0,0,.18);
+}
+
 nav{display:flex;justify-content:center;gap:6px;background:#2C5D8A;border-radius:8px;margin-bottom:28px;box-shadow:0 2px 8px rgba(0,0,0,.12);}
-nav a{color:#fff;text-decoration:none;padding:15px 22px;font-weight:600;border-radius:6px;}
+
+nav a
+{
+color:#fff;text-decoration:none;
+ padding:12px clamp(10px,2vw,22px);
+font-weight:600;border-radius:6px;
+}
+
 nav a.active{background:#fff;color:#2C5D8A;}
 nav a:hover{background:#8B5A2B;}
 .follow-bar{margin:32px -30px 40px;padding:10px 30px;background:#F1FAF1;border-top:4px solid #1B5E20;border-bottom:4px solid #1B5E20;}
@@ -384,7 +411,34 @@ nav a:hover{background:#8B5A2B;}
 .simple-list li{padding:12px 0;border-bottom:1px solid #eee;}
 .thesis{padding:18px 0;border-bottom:1px solid #ddd;}
 footer{margin-top:50px;border-top:1px solid #ddd;text-align:center;color:#777;padding-top:18px;}
-@media(max-width:900px){.header{flex-direction:column}.photo img{width:180px}.people-grid{grid-template-columns:1fr}}
+
+<!-- @media(max-width:900px){.header{flex-direction:column}.photo img{width:180px}.people-grid{grid-template-columns:1fr}} -->
+
+@media (max-width:1000px){
+
+    .header{
+        flex-direction:column;
+    }
+
+    .photo{
+        order:-1;
+        margin-bottom:20px;
+    }
+
+    .photo img{
+        width:clamp(150px,30vw,180px);
+    }
+
+    .people-grid{
+        grid-template-columns:1fr;
+    }
+
+    body{
+        padding:16px;
+    }
+
+}
+
 </style>
 </head>
 <body>

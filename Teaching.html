@@ -20,9 +20,13 @@ rel="stylesheet">
 
 body{
     font-family:'Source Sans 3',sans-serif;
-    max-width:1200px;
+	font-size:clamp(15px, 1vw, 18px);
+		
+    width:min(96vw, 1400px);
+
     margin:auto;
-    padding:35px;
+
+    padding:1.5vw;
     color:#222;
     line-height:1.7;
 }
@@ -39,7 +43,7 @@ nav{
 nav a{
     color:white;
     text-decoration:none;
-    padding:15px 22px;
+     padding:12px clamp(10px,2vw,22px);
     font-weight:600;
 }
 
@@ -51,12 +55,14 @@ nav a.active{
 
 h1{
     font-family:'Merriweather',serif;
+	font-size:clamp(2.2rem, 4vw, 3rem);
     color:#0F3E73;
 }
 
 h2{
     color:#0F3E73;
     margin-top:50px;
+	font-size:clamp(1.5rem, 2.5vw, 2rem);
 }
 
 .hero{
@@ -346,25 +352,24 @@ footer{
 
 }
 
-@media(max-width:800px){
+@media (max-width:1000px){
 
-.stats{
+    .stats{
+        grid-template-columns:1fr 1fr;
+    }
 
-grid-template-columns:1fr 1fr;
+    .course{
+        flex-direction:column;
+    }
 
-}
+    .course img{
+        width:clamp(90px,25vw,120px);
+        margin:0 auto 15px;
+    }
 
-.course{
-
-flex-direction:column;
-
-}
-
-.course img{
-
-width:100px;
-
-}
+    body{
+        padding:16px;
+    }
 
 }
 

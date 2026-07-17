@@ -14,9 +14,12 @@
 
 body{
     font-family:'Source Sans 3',sans-serif;
-    max-width:1200px;
+	font-size:clamp(15px, 1vw, 18px);
+    width:min(96vw, 1400px);
+
     margin:auto;
-    padding:35px;
+
+    padding:1.5vw;
     color:#222;
     line-height:1.7;
 }
@@ -25,7 +28,7 @@ h1{
     font-family:'Merriweather',serif;
     color:#0F3E73;
     margin:0 0 10px 0;
-    font-size:3rem;
+    font-size:clamp(2.2rem, 4vw, 3rem);
 }
 
 .header{
@@ -91,7 +94,7 @@ h1{
 }
 
 .photo img{
-    width:245px;
+width:clamp(170px, 18vw, 245px);
     border-radius:12px;
 
     border:5px solid white;
@@ -112,7 +115,7 @@ nav{
 nav a{
     color:#fff;
     text-decoration:none;
-    padding:15px 22px;
+     padding:12px clamp(10px,2vw,22px);
     font-weight:600;
     border-radius:6px;
 }
@@ -132,7 +135,9 @@ nav a:hover{
 
 .follow-bar{
 
-    margin:32px -30px 40px -30px;
+    margin:clamp(15px,2vw,30px)
+           clamp(-20px,-2vw,-30px)
+           clamp(20px,3vw,40px);
     padding:10px 30px;
 
     background:#F1FAF1;
@@ -281,7 +286,7 @@ nav a:hover{
 
 h2{
     color:#0F3E73;
-    font-size:2rem;
+    font-size:clamp(1.5rem, 2.5vw, 2rem);
 }
 
 .news{
@@ -370,12 +375,44 @@ footer{
     padding-top:18px;
 }
 
-@media(max-width:900px){
+<!-- @media(max-width:900px){
 .header,.main{flex-direction:column;}
 .photo img{width:180px;}
 nav{flex-wrap:wrap;}
 .follow-bar{margin:25px 0;}
+} -->
+
+@media (max-width:1000px){
+
+    .header,
+    .main{
+        flex-direction:column;
+    }
+
+    .photo{
+        order:-1;
+        margin-bottom:20px;
+    }
+
+    .photo img{
+        width:clamp(150px,30vw,180px);
+    }
+
+    nav{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .follow-bar{
+        margin:20px 0;
+    }
+
+    body{
+        padding:16px;
+    }
+
 }
+
 </style>
 </head>
 <body>
